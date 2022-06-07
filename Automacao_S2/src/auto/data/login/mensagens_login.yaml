@@ -1,0 +1,6 @@
+MSG:
+  ERRO_LOGIN: Usuário / senha incorretos
+  TELA_LOGADA: Nota dada pelos pacientes que eu atendi
+
+MSG_MEDICO:
+  MEDICO_BOAS_VINDAS: Olá, Dr Medico De Teste Automatizado

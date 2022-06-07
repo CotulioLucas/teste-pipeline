@@ -1,0 +1,12 @@
+NOVO_USARIO:
+  MSG_ERRO:
+    NOME_PACIENTE_INVALIDO: Informe o nome do paciente
+    NOME_REGISTRO_INVALIDO: Informe o nome de registro do paciente
+    COMO_SER_CHAMADO_INVALIDO: Informe o apelido do paciente (como gostaria de ser chamado?)
+    SEXO_PACIENTE_INVALIDO: Informe o sexo do paciente
+    DATA_NASCIMENTO_INVALIDA: Informe a data de nascimento ==> N
+    COMO_NOS_CONHECEU_INVALIDO: Informe de onde conheceu o dr.consulta
+    CELULAR_TELEFONE_INVALIDO: Informe ao menos o número do telefone celular
+    ERRO_REQUISITAR_DADOS: Erro ao requisitar os dados
+    REQUERIMENTO_NOME_SOCIAL: Paciente precisa assinar o requerimento de nome social
+    NECESSARIO_FOTO_RG: É necessário o envio da foto do RG
