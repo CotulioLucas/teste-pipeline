@@ -1,1 +1,1 @@
-robot -d ./logs -v HEADLESS:True tests/features/medico
+robot -d ./logs -v HEADLESS:False tests/features/medico
