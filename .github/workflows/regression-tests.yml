@@ -29,4 +29,4 @@ jobs:
     - name: Run Automated Tests S2
       run: |
         chmod +x ./Automacao_S2/run.sh
-        cd Automacao_S2/ %% ./run.sh
+        cd Automacao_S2/ && ./run.sh
