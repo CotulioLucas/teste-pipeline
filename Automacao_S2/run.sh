@@ -1,1 +1,1 @@
-robot -d ./logs -v HEADLESS:False tests/features/medico
+robot -d ./logs -d ./logs -v BROWSER:chromium -v HEADLESS:True tests/features/medico
