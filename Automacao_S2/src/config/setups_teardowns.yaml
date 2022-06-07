@@ -1,7 +1,7 @@
 CONFIG:
   BROWSER:
-    NAME: headlesschrome
+    NAME: chrome
     URL_SITE: https://s2homolog.drconsulta.com/
     IMPLICITY_WAIT: 60
-    LARGURA_TELA: 1440
-    ALTURA_TELA: 900
+    LARGURA_TELA: 1920
+    ALTURA_TELA: 1080
