@@ -29,7 +29,7 @@ jobs:
     - name: Set timezone America/Sao_Paulo
       uses: szenius/set-timezone@v1.0
       with:
-        timezoneWindows: "America/Sao_Paulo"      
+        timezoneLinux: "America/Sao_Paulo"      
         
     - name: Run Automated Tests S2
       run: |
