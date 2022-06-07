@@ -8,4 +8,4 @@ robotframework-pythonlibcore==3.0.0
 robotframework-seleniumlibrary==6.0.0
 robotframework-stacktrace==0.4.1
 robotframework-yamllibrary==0.2.8
-robotframework-datetime-tz=1.0.6
+robotframework-datetime-tz==1.0.6
