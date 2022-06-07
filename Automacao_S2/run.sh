@@ -1,1 +1,1 @@
-robot -d ./logs -v BROWSER:chromium -v HEADLESS:True -e TZ=America/Sao_Paulo tests/features/medico
+robot -d ./logs -v BROWSER:chromium -v HEADLESS:True -v TZ=America/Sao_Paulo tests/features/medico
