@@ -8,8 +8,7 @@ Open Session
     Open Browser    ${CONFIG.BROWSER.URL_SITE}                         ${CONFIG.BROWSER.NAME}
     ...             options=add_argument("--disable-dev-shm-usage");add_experimental_option("excludeSwitches", ["enable-logging"])
 
-    # Set Window Size         ${CONFIG.BROWSER.LARGURA_TELA}      ${CONFIG.BROWSER.ALTURA_TELA}
-    Maximize Browser Window
+    Set Window Size         ${CONFIG.BROWSER.LARGURA_TELA}      ${CONFIG.BROWSER.ALTURA_TELA}
     Set Selenium Speed      0.2 seconds
     Set Selenium Timeout    ${CONFIG.BROWSER.IMPLICITY_WAIT}
 
