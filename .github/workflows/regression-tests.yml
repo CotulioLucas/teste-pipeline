@@ -30,3 +30,12 @@ jobs:
       run: |
         chmod +x ./Automacao_S2/run.sh
         cd Automacao_S2/ && ./run.sh
+        
+    - name: Upload S2 tests results
+      uses: actions/upload-artifact@v3.1.0
+      if: always()
+      with:
+        name: reports-tests-S2
+        path: Automacao_S2/logs
+
+      
