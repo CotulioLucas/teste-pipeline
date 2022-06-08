@@ -12,7 +12,6 @@ Documentation    Arquivo de Mapeamento de arquivos
 Library         SeleniumLibrary
 Library         FakerLibrary        locale=pt_BR
 Library         DateTime
-Library         DatabaseLibrary
 Library         OperatingSystem
 
 ## #####################################################################
