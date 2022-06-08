@@ -145,7 +145,9 @@ Verificar se existe modal de atendimento deste paciente
     ${ATEND_DESTE_PACIENTE} =    Run Keyword And Return Status          Wait Until Element Is Visible        ${TELA_ATENDIMENTO_PRONTUARIO.MODAL_ATENDIMENTOS_DO_PACIENTE}        10s
     IF        "${ATEND_DESTE_PACIENTE}" == "True"
               Wait Until Element Is Visible           xpath://div[@id="modal_verificar_atendimento_pac"]/div[@class="modal_body"]
+              Wait Until Element Is Not Visible       ${BUSCAR_PACIENTE_AGENDAMENTO.TELA_CARREGAMENTO}
               Click Element                           ${TELA_ATENDIMENTO_PRONTUARIO.BTN_FECHA_ATENDIMENTO_PACIENTE}
+              Wait Until Page Contains Element        xpath://*[text()="${SENHA_ATENDIMENTO}"]
     ELSE
               Wait Until Page Contains Element    xpath://*[text()="${SENHA_ATENDIMENTO}"]/../td[@data-stat="E"]
               ${STATUS_FINALIZADO} =              Get Text                      xpath://*[text()="${SENHA_ATENDIMENTO}"]/../td[@data-stat="E"]
