@@ -19,23 +19,23 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-        
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install build
         pip install -r requirements.txt
-        
+
     - name: Set timezone America/Sao_Paulo
       uses: szenius/set-timezone@v1.0
       with:
-        timezoneLinux: "America/Sao_Paulo"      
-        
+        timezoneLinux: "America/Sao_Paulo"
+
     - name: Run Automated Tests S2
       run: |
         chmod +x ./Automacao_S2/run.sh
         cd Automacao_S2/ && ./run.sh
-        
+
     - name: Upload S2 tests results
       uses: actions/upload-artifact@v3.1.0
       if: always()
@@ -43,4 +43,9 @@ jobs:
         name: reports-tests-S2
         path: Automacao_S2/logs
 
-      
+    - name: Report Test S2
+      uses: dorny/test-reporter@v1.5.0
+      with:
+        name: Report Test - S2
+        path: Automacao_S2/logs/report_unit.xml
+        reporter: java-junit
