@@ -47,5 +47,5 @@ jobs:
       uses: dorny/test-reporter@v1.5.0
       with:
         name: Report Test - S2
-        path: Automacao_S2/logs/report_unit.xml
+        path: Automacao_S2/logs/xunit.xml
         reporter: java-junit
