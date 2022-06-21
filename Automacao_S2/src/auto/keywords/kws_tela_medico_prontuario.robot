@@ -20,7 +20,8 @@ Então devo finalizar o atendimento
     Finalizar atendimento do paciente
     Clicar em não contempla retorno
     Clicar em finalizar questionario atendimento
-    Wait Until Page Contains                        Atendimento finalizado
+    Wait Until Page Does Not Contain             Finalizando Atendimento. Aguarde...
+    Wait Until Page Contains                     Atendimento finalizado
 
 E validar o status do paciente como finalizado
     Verificar se existe modal de atendimento deste paciente

@@ -42,10 +42,3 @@ jobs:
       with:
         name: reports-tests-S2
         path: Automacao_S2/logs
-
-    - name: Report Test S2
-      uses: dorny/test-reporter@v1.5.0
-      with:
-        name: Report Test - S2
-        path: Automacao_S2/logs/report_unit.xml
-        reporter: java-junit

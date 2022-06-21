@@ -17,4 +17,7 @@ Open Session
 
 Close Session
     Capture Page Screenshot
+    Conectar no bando de dados DRC
+    Realizar quantidade de consultas para paciente de teste na fila do médico
+    Fechar conexão
     Close Browser
