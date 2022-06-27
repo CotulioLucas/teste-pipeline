@@ -6,5 +6,4 @@ robotframework-pabot==2.5.3
 robotframework-pythonlibcore==3.0.0
 robotframework-seleniumlibrary==6.0.0
 robotframework-yamllibrary==0.2.8
-robotframework-pabot==2.1.0
 robotframework-databaselibrary==1.2.4
