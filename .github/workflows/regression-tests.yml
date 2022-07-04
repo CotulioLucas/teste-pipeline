@@ -31,6 +31,13 @@ jobs:
       with:
         timezoneLinux: "America/Sao_Paulo"
 
+    - name: Connect VPN
+      uses: golfzaptw/action-connect-ovpn@2.0.1
+      with:
+        PING_URL: 127.0.0.1
+        # Location file open vpn
+        FILE_OVPN: # default is ./config.ovpn
+
     - name: Run Automated Tests S2
       run: |
         chmod +x ./Automacao_S2/run.sh
