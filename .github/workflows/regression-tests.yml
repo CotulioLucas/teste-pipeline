@@ -35,8 +35,7 @@ jobs:
       uses: golfzaptw/action-connect-ovpn@2.0.1
       with:
         PING_URL: 127.0.0.1
-        # Location file open vpn
-        FILE_OVPN: # default is ./config.ovpn
+        FILE_OVPN: ./config.ovpn
 
     - name: Run Automated Tests S2
       run: |
@@ -44,7 +43,7 @@ jobs:
         cd Automacao_S2/ && ./run.sh
 
     - name: Upload S2 tests results
-      uses: actions/upload-artifact@v3.1.0
+      uses: actions/upload-artifact@v3.1.0"
       if: always()
       with:
         name: reports-tests-S2
