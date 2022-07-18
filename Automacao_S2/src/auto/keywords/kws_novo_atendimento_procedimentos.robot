@@ -1,7 +1,8 @@
 *** Settings ***
-Documentation    Keywords referentes aos cenários de Login
+Documentation       Keywords referentes aos cenários de Login
 
-Resource         ../../config/packages.robot
+Resource            ../../config/packages.robot
+
 
 *** Keywords ***
 Dado que eu esteja na tela de novo atendimento
@@ -20,8 +21,8 @@ Quando informar a senha de atendimento
 
 E buscar o paciente ja cadastrado
     Buscar paciente ja cadastrado
-    Wait Until Element Is Visible       ${BUSCAR_PACIENTE_NOVO_ATENDIMENTO.TBL_RESULTADO_BUSCA}
-    Page Should Contain                 ${DADOS_PACIENTE.NOME_PACIENTE}
+    Wait Until Element Is Visible    ${BUSCAR_PACIENTE_NOVO_ATENDIMENTO.TBL_RESULTADO_BUSCA}
+    Page Should Contain    ${DADOS_PACIENTE.NOME_PACIENTE}
 
 E selecionar o paciente
     Clicar em selecionar paciente
@@ -42,7 +43,7 @@ E realizar o pagamento com cartão de crédito
     Aguardar pagamento via maquina de cartão
 
 Então devo ver a confirmação do pagamento e finalizo atendimento
-    Page Should Contain                       Pagamento confirmado
+    Page Should Contain    Pagamento confirmado
     Clicar em finalizar pagamento e fechar modal recibo
 
 E realizar o procedimento de exame
@@ -72,12 +73,14 @@ E realizar o procedimento de vacina
     Executar javascript e alterar elemento impressão termo
 
 E envio o recibo para o paciente
-    Wait Until Element Is Visible       ${PAGAMENTOS.BTN_RECIBO}
-    Click Button                        ${PAGAMENTOS.BTN_RECIBO}
-    Wait Until Element Is Visible       ${PAGAMENTOS_RECIBO.MODAL_RECIBO}
-    Wait Until Element Is Visible       ${PAGAMENTOS_RECIBO.CAMPO_EMAIL_PACIENTE}
-    Click Button                        ${PAGAMENTOS_RECIBO.CAMPO_EMAIL_PACIENTE}
-    Input Text                          ${PAGAMENTOS_RECIBO.CAMPO_EMAIL_PACIENTE}       ${DADOS_PACIENTE.EMAIL_PACIENTE}
-    Click Button                        ${PAGAMENTOS_RECIBO.BTN_ENVIAR_EMAIL}
-    Wait Until Element Is Enabled       ${PAGAMENTOS_RECIBO.BTN_ENVIAR_EMAIL}
-    Page Should Contain                 ${MSG_PAGAMENTOS.MSG_EMAIL_SUCESSO}
+    Wait Until Element Is Visible    ${PAGAMENTOS.BTN_RECIBO}
+    Click Button    ${PAGAMENTOS.BTN_RECIBO}
+    Wait Until Element Is Visible    ${PAGAMENTOS_RECIBO.MODAL_RECIBO}
+    Wait Until Element Is Visible    ${PAGAMENTOS_RECIBO.CAMPO_EMAIL_PACIENTE}
+    Click Button    ${PAGAMENTOS_RECIBO.CAMPO_EMAIL_PACIENTE}
+    Input Text
+    ...    ${PAGAMENTOS_RECIBO.CAMPO_EMAIL_PACIENTE}
+    ...    ${DADOS_PACIENTE.EMAIL_PACIENTE}
+    Click Button    ${PAGAMENTOS_RECIBO.BTN_ENVIAR_EMAIL}
+    Wait Until Element Is Enabled    ${PAGAMENTOS_RECIBO.BTN_ENVIAR_EMAIL}
+    Page Should Contain    ${MSG_PAGAMENTOS.MSG_EMAIL_SUCESSO}

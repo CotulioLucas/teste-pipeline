@@ -1,0 +1,8 @@
+steps:
+  # Install dependencies
+  - name: 'python:3.9-slim'
+    id: Test
+    entrypoint: /bin/sh
+    args:
+      - 'pip install nodejs'
+      - 'bash ./run.sh'
